@@ -70,12 +70,11 @@ void draw()
     //get time for next image
     timePoint=millis() + interval;
   }
-  
   tint(255, 126);  // Apply transparency without changing color
   image(a, 0, 0);
   noStroke();
   fill(255);
-  //ellipse(mouseX, mouseY, 400, 400);
+//ellipse(mouseX, mouseY, 400, 400);
 //  image(s, map(x1,0,1,0,width)-200, map(y1,1,0,0,height)-200,400,400);
   image(s, map(x2,0,1,0,width)-200, map(y2,1,0,0,height)-200,400,400);
 //  image(s, map(x1,0,1,0,width)-200, map(y1,1,0,0,height)-200,400,400);
@@ -85,6 +84,15 @@ void draw()
 //  image(s, map(x1,0,1,0,width)-200, map(y1,1,0,0,height)-200,400,400);
   image(s, map(x2,0,1,0,width)-200, map(y2,1,0,0,height)-200,400,400);
   blend(a, 0, 0, p_width, p_height, 0, 0, p_width, p_height, DARKEST);
+
+  textSize(16);
+textAlign(CENTER, BOTTOM);
+fill(0);
+String txt = "Nous remercions tous les participants ! Et pour contribuer vous aussi,";
+text(txt, p_width/2, p_height - 80);  // Text wraps within text box
+String txt2 = "rendez-vous sur www.science-animation.org/planteideale";
+text(txt2, p_width/2, p_height - 57);  // Text wraps within text box  
+
 }
 
 
